@@ -12,3 +12,7 @@ export const RIGHT_PANEL_COMPETENCE_INFORMATIONS_DATA: RightPanelInformationMode
     description: 'Accessibilité / référencement',
   },
 ]
+
+export const RIGHT_PANEL_LOGO: Record<string, string> = {
+  HTML: ''
+}
