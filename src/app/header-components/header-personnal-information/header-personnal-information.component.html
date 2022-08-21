@@ -1,0 +1,62 @@
+<div class="header_information_container">
+  <div *ngFor="let info of personnalInformation">
+    <div>{{ info.firstName + ' ' + info.lastName }}</div>
+    <app-personnal-information-detail
+      [personnalInformationDetail]="info.address"
+    ></app-personnal-information-detail>
+    <app-personnal-information-detail
+      [personnalInformationDetail]="info.phone"
+    ></app-personnal-information-detail>
+    <app-personnal-information-detail
+      [personnalInformationDetail]="info.mail"
+    ></app-personnal-information-detail>
+    <app-personnal-information-detail
+      [personnalInformationDetail]="info.identity"
+    ></app-personnal-information-detail>
+  </div>
+  <div class="avatar_container">
+    <img
+      src="../../../assets/images/sylvain.jpg"
+      alt="sylvain Genest web développeur"
+      class="avatar_img"
+    />
+  </div>
+</div>
+<h1>Développeur Web</h1>
+<h2>Front-end / Back-end</h2>
+<div>
+  <div>
+    <div>
+      <h2>FORMATIONS</h2>
+      <div *ngFor="let leftInfo of leftPanelFormationInformations">
+        <app-left-panel-information
+          [leftPanelInformation]="leftInfo"
+        ></app-left-panel-information>
+      </div>
+    </div>
+    <div>
+      <h2>EXPERIENCES</h2>
+      <div *ngFor="let leftInfo of leftPanelExperienceInformations">
+        <app-left-panel-information
+          [leftPanelInformation]="leftInfo"
+        ></app-left-panel-information>
+      </div>
+    </div>
+    <div>
+      <h2>LOISIRS</h2>
+      <div *ngFor="let leftInfo of leftPanelHobbiInformations">
+        <app-left-panel-information
+          [leftPanelInformation]="leftInfo"
+        ></app-left-panel-information>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>COMPETENCES</h2>
+    <div *ngFor="let rightInfo of rightPanelCompetenceInformation">
+      <app-right-panel-information-detail
+        [rightPanelInformation]="rightInfo"
+      ></app-right-panel-information-detail>
+    </div>
+  </div>
+</div>

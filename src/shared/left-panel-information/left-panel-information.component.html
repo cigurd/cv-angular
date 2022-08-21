@@ -1,0 +1,11 @@
+<div *ngIf="leftPanelInformation">
+  <div>
+    <h3>{{ leftPanelInformation.title }}</h3>
+    <h3>{{ leftPanelInformation.date }}</h3>
+  </div>
+  <p>{{ leftPanelInformation.description }}</p>
+  <p>{{ leftPanelInformation.organism }}</p>
+  <p *ngIf="leftPanelInformation.organism2">
+    {{ leftPanelInformation.organism2 }}
+  </p>
+</div>
